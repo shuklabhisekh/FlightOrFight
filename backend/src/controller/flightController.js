@@ -22,11 +22,11 @@ router.get("", async (req, res) => {
   }
 });
 
-router.get("/start&end", async (req, res) => {
+router.get("/:start&end", async (req, res) => {
   try {
     const flight = await Flight.find({$and:[
-        {start:req.params.start},
-        {end:req.params.end}
+        {start:req.query.start},
+        {end:req.query.end}
       ]})
       .lean()
       .exec();
