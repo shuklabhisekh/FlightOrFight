@@ -1,5 +1,5 @@
 const express = require ("express")
-
+const cors = require("cors")
 const connect = require("./config/db")
 const app = express()
 app.use(express.json())
@@ -8,6 +8,7 @@ const flightController = require("./controller/flightController")
 const airportController = require("./controller/airportController")
 
 let port = process.env.PORT || 5500;
+app.use(cors());
 
 app.use("/flight", flightController)
 app.use("/airport",airportController)
