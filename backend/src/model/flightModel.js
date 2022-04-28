@@ -17,8 +17,19 @@ const flightSchema = new mongoose.Schema(
     cost: { type: Number, required: true },
     startTime: { type: String, required: true },
     endTime: { type: String, required: true },
-    PNR: { type: Number, required: true, unique:true, minlength: 8, maxlength: 10 },
+    PNR: {
+      type: Number,
+      required: true,
+      unique: true,
+      minlength: 8,
+      maxlength: 10,
+    },
     capacity: { type: Number, required: true },
+    airportId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "airport",
+      required: true,
+    },
   },
   {
     versionKey: false,
