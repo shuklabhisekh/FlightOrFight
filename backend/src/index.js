@@ -4,7 +4,9 @@ const connect = require("./config/db")
 const app = express()
 app.use(express.json())
 
+// Controller for flight
 const flightController = require("./controller/flightController")
+// Controller for airport
 const airportController = require("./controller/airportController")
 
 let port = process.env.PORT || 5500;
