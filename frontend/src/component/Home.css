@@ -1,0 +1,10 @@
+table,thead,tr{
+    width: 100%;
+}
+tr{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+th{
+    border: 1px solid royalblue;
+}
