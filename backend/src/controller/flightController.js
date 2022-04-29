@@ -39,19 +39,5 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// router.get("", async (req, res) => {
-//   try {
-//     const flight = await Flight.find({
-//       // $and:[
-//       start: req.query.start,
-//       // req.query.end
-//       // ]
-//     })
-//       .lean()
-//       .exec();
-//     return res.status(200).send(flight);
-//   } catch (error) {
-//     return res.status(500).send(error.message);
-//   }
-// });
+
 module.exports = router;
